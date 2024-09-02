@@ -13,12 +13,12 @@ const client = redis.createClient({
 
 client.connect().catch((err) => console.error("Error connecting to Redis:", err));
 
-const app = express();
+const app = express() ;
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.status(200).json({ message: "Hello, This is Redis" });
+    res.status(200).json({ message: "Hello, This is Redis basics and husky " });
 });
 
 app.post("/catchedRoute", async(req, res) => {
